@@ -1,0 +1,10 @@
+
+<h1>Testing Site</h1>
+ <button onclick="callflask()">Submit</button>
+<script>
+    function callflask(){
+      fetch('http://localhost:8080/test')
+      .then(response => response.json())
+      .then(data => alert(data['greeting']));
+    }
+</script>
